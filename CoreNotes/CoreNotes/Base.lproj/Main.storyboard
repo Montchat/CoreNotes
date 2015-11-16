@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SIN-0m-mrk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--NotesTVC-->
+        <scene sceneID="01S-43-z72">
+            <objects>
+                <tableViewController id="y1l-Iu-cNY" customClass="NotesTVC" customModule="CoreNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hvN-O1-e1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="tgp-hb-Q1u">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgp-hb-Q1u" id="nJ2-zY-MqG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y1l-Iu-cNY" id="LLs-6l-FVv"/>
+                            <outlet property="delegate" destination="y1l-Iu-cNY" id="kpu-1X-NJw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qYO-Ik-ofT">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="IU7-48-RYD">
+                                <connections>
+                                    <segue destination="HyT-8k-SZe" kind="presentation" id="XCf-FE-TVO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="AZ1-nT-WpL">
+                                <connections>
+                                    <segue destination="Xph-Jx-T4C" kind="presentation" id="tXC-5v-owt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNa-dr-2fl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2424.5" y="-54.5"/>
+        </scene>
+        <!--New CategoryVC-->
+        <scene sceneID="Mn3-97-xX8">
+            <objects>
+                <viewController id="Xph-Jx-T4C" customClass="NewCategoryVC" customModule="CoreNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FET-1n-vgT"/>
+                        <viewControllerLayoutGuide type="bottom" id="N9Z-Ym-d76"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k6P-hj-6ll">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WR7-Qn-YPo">
+                                <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-Nk-ohh">
+                                <rect key="frame" x="-1" y="273" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="469393016.09853601">
+                                    <!--2015-11-16 18:56:56 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="didPickDate:" destination="Xph-Jx-T4C" eventType="valueChanged" id="J76-at-kMa"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMQ-2G-x4o">
+                                <rect key="frame" x="20" y="597" width="150" height="50"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="Xph-Jx-T4C" eventType="touchUpInside" id="AUf-Li-Ehu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMu-HS-fSk">
+                                <rect key="frame" x="205" y="597" width="150" height="50"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="create:" destination="Xph-Jx-T4C" eventType="touchUpInside" id="QK7-vd-1og"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoryNameField" destination="WR7-Qn-YPo" id="tUl-rM-c3j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-aM-idy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2153.5" y="763.5"/>
+        </scene>
+        <!--New NoteVC-->
+        <scene sceneID="oQs-lZ-oIG">
+            <objects>
+                <viewController id="HyT-8k-SZe" customClass="NewNoteVC" customModule="CoreNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="82l-TL-Phw"/>
+                        <viewControllerLayoutGuide type="bottom" id="GFe-tx-o0d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4LX-ay-eM7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-fS-TAj">
+                                <rect key="frame" x="20" y="28" width="335" height="223"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7C-Vx-DGu">
+                                <rect key="frame" x="0.0" y="248" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERA-FT-Oof">
+                                <rect key="frame" x="20" y="597" width="150" height="50"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwN-Tw-GGR">
+                                <rect key="frame" x="205" y="597" width="150" height="50"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vT-0i-uTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2695.5" y="763.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wDs-jJ-3HJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SIN-0m-mrk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kYK-Ag-Q8o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y1l-Iu-cNY" kind="relationship" relationship="rootViewController" id="rj9-rJ-Cv7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sK-Dz-1K3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="-54"/>
+        </scene>
+    </scenes>
+</document>
