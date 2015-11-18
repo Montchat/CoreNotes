@@ -16,7 +16,7 @@ class NewCategoryVC: UIViewController {
     
     var pickedDate: NSDate = NSDate()
     
-    @IBOutlet weak var categoryNameField: UITextField!
+    @IBOutlet weak var categoryNameField: UITextField! { didSet { categoryNameField.delegate = self } }
     
     @IBAction func didPickDate(sender: AnyObject) {
         
@@ -34,20 +34,7 @@ class NewCategoryVC: UIViewController {
         
     }
     override func viewDidLoad() {
-        categoryNameField.delegate = self
+     
     }
-    
-}
-
-extension NewCategoryVC : UITextFieldDelegate {
-    func textFieldDidEndEditing(textField: UITextField) {
-        textField.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
     
 }

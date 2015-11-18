@@ -1,0 +1,12 @@
+#CoreNotes
+*An app that uses CoreData to store your notes*
+
+### Frameworks
+
+-CoreData
+-CloudKit
+
+### Desing Patterns
+
+-Extensions
+-Protocols
