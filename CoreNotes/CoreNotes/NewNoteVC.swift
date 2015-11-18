@@ -7,29 +7,63 @@
 //
 
 import UIKit
+import CoreData
+
+private let CATEGORY = "Category"
+private let _CATEGORY = "category"
+private let NOTE = "Note"
+private let _TEXT = "text"
 
 class NewNoteVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var noteTextView: UITextView!
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    
+    @IBAction func cancel(sender: AnyObject) {
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func create(sender: AnyObject) {
+        createNote()
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        categoryPicker.dataSource = self
+        
+    }
+    
+    var categories: [Category] = []
 
+}
+
+extension NewNoteVC : UIPickerViewDelegate {
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categories.count
+        
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+}
+
+extension NewNoteVC : UIPickerViewDataSource {
+    
+    
+    
+    
 }

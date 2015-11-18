@@ -29,13 +29,7 @@ class NewCategoryVC: UIViewController {
     }
     
     @IBAction func create(sender: AnyObject) {
-        guard let appD = UIApplication.sharedApplication().delegate as? AppDelegate else { return }
-        
-        let newCategory = NSEntityDescription.insertNewObjectForEntityForName(CATEGORY, inManagedObjectContext: appD.managedObjectContext)
-        newCategory.setValue(categoryNameField.text, forKey: NAME)
-        
-        appD.saveContext()
-        
+        createCategory()
         dismissViewControllerAnimated(true, completion: nil)
         
     }

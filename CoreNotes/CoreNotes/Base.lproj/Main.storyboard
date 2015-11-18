@@ -123,16 +123,26 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERA-FT-Oof">
                                 <rect key="frame" x="20" y="597" width="150" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="HyT-8k-SZe" eventType="touchUpInside" id="syV-5g-3lN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwN-Tw-GGR">
                                 <rect key="frame" x="205" y="597" width="150" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="create:" destination="HyT-8k-SZe" eventType="touchUpInside" id="OcO-b9-Rno"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoryPicker" destination="p7C-Vx-DGu" id="GT6-mP-n8X"/>
+                        <outlet property="noteTextView" destination="0lw-fS-TAj" id="F1u-5J-qfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vT-0i-uTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

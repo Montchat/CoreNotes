@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BF44E0D1BFB82A500DCD1C1 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF44E0C1BFB82A500DCD1C1 /* CoreData.swift */; };
 		2BFF921B1BFA4BD000032CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF921A1BFA4BD000032CC7 /* AppDelegate.swift */; };
 		2BFF92201BFA4BD000032CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFF921E1BFA4BD000032CC7 /* Main.storyboard */; };
 		2BFF92231BFA4BD000032CC7 /* CoreNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF92211BFA4BD000032CC7 /* CoreNotes.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BF44E0C1BFB82A500DCD1C1 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		2BFF92171BFA4BD000032CC7 /* CoreNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFF921A1BFA4BD000032CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFF921F1BFA4BD000032CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				2BFF921A1BFA4BD000032CC7 /* AppDelegate.swift */,
+				2BF44E0C1BFB82A500DCD1C1 /* CoreData.swift */,
 				2BFF92241BFA4BD000032CC7 /* Assets.xcassets */,
 				2BFF92261BFA4BD000032CC7 /* LaunchScreen.storyboard */,
 				2BFF92291BFA4BD000032CC7 /* Info.plist */,
@@ -277,6 +280,7 @@
 				2BFF92231BFA4BD000032CC7 /* CoreNotes.xcdatamodeld in Sources */,
 				2BFF92511BFA615900032CC7 /* NewNoteVC.swift in Sources */,
 				2BFF92531BFA6AC800032CC7 /* NewCategoryVC.swift in Sources */,
+				2BF44E0D1BFB82A500DCD1C1 /* CoreData.swift in Sources */,
 				2BFF921B1BFA4BD000032CC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +506,7 @@
 				2BFF92441BFA4BD100032CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BFF92451BFA4BD100032CC7 /* Build configuration list for PBXNativeTarget "CoreNotesTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +515,7 @@
 				2BFF92471BFA4BD100032CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BFF92481BFA4BD100032CC7 /* Build configuration list for PBXNativeTarget "CoreNotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +524,7 @@
 				2BFF924A1BFA4BD100032CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
